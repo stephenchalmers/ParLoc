@@ -80,8 +80,11 @@ function retrieveLatLon(address) {
             //            apiParsedAddress = apiParsedAddress.replaceAll(', ', '<br>');
 
             document.getElementById("result").innerHTML =
-                `This location seems to be near the ${locationType}:<br> ${apiParsedAddress}.<br><br>
-            This location is at Lat/Lon: ${userLat}, ${userLon}.<br><br>`;
+                `<strong>This location seems to be near:</strong><br>The ${locationType} ${apiParsedAddress}.<br>
+                <strong>This location is at </strong> Latitude: ${userLat}, Longitude: ${userLon}.<br>
+                You can double check the accuracy <a href='https://maps.google.com/maps?q=${userLat},${userLon}' target='_blank'>HERE</a>.`;
+            // You can double check the accuracy <a href='https://maps.google.com/maps?q=&layer=c&cbll=${userLat},${userLon}' target='_blank'>HERE</a>.`;
+
 
             if (userLat < 24.6 || userLat > 49.2 || userLon < -124.7 || userLon > -67.0) {
                 document.getElementById("countryCheck").innerHTML =
