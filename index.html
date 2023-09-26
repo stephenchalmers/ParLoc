@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parler Locator - Stephen Chalmers</title>
+  <link rel="icon" type="image/x-icon" href="PL_Assets/images/favicon.ico">
+  <link rel="shortcut icon" href="PL_Assets/images//favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="PL_Assets/images//favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="PL_Assets/images//favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="PL_Assets/images//favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="PL_Assets/images//favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="PL_Assets/images//favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="PL_Assets/images//favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="PL_Assets/images//favicon-16.png">
+  <link rel="apple-touch-icon" href="PL_Assets/images//favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="PL_Assets/images//favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="PL_Assets/images//favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="PL_Assets/images//favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="PL_Assets/images//favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="PL_Assets/images//favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="PL_Assets/images//favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="PL_Assets/images//favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="PL_Assets/images//favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="PL_Assets//favicon-144.png">
+  <meta name="msapplication-config" content="PL_Assets//browserconfig.xml">
+
+
+  <link href="PL_Assets/styles/PL_Style.css" rel="stylesheet" type="text/css">
+  <!--Adobe Edge Web Fonts server-->
+  <script>var __adobewebfontsappname__ = "dreamweaver"</script>
+  <script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js"
+    type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="mainwrapper">
+    <header>
+      <div id="logo">
+        <img class="pl_logo" src="PL_Assets/images/PL_Logo-100px.png" alt="Parler Locator Logo">
+      </div>
+
+      <nav> <a href="index.html" class="links">Home</a>|&nbsp&nbsp<a href="locator.html"
+          class="links">Locator</a>|&nbsp&nbsp<a href="author.html" class="links">Author</a> </nav>
+    </header>
+    <div id="content">
+
+      <section id="mainContent">
+        <h3>Click on the "Locator" link above to find the locations of the closest pre-01/2021 geotagged Parler videos
+          to your entered address!</h3>
+        <h1>Background Information: Parler Locator (v 2023.10)</h1>
+        <div id="About_text">
+          <p>The social media site '<a href="https://en.wikipedia.org/wiki/Parler/">Parler</a>,' was launched on 08
+            August 2018 by John Matze and Jared Thomson. Associated with extreme conservatives, the platform marketed
+            itself as a “free speech” alternative (meaning fewer content policies) to other networks such as Twitter and
+            Facebook.</p>
+          <p>During 2020, Parler experienced a significant surge in popularity during the lead-up to the U.S.
+            presidential election. Many users flocked to the platform, believing it provided a platform for unfettered
+            conservative political discourse - while others viewed the network as amplifying extremist, racist, sexist
+            and violent content, along with conspiracy theories.</p>
+
+          <p>After the storming of the U.S. Capitol on 6 January 2021, Parler faced increased scrutiny due to its role
+            in facilitating the planning and organization of the insurrection. The application was removed from Apple's
+            App Store and Google Play, and on 10 January 2021 Amazon Web Services terminated Parler's hosting services,
+            after finding the company in breach of contract for failing to identify and remove posts by users that
+            called for the “rape, torture, and assassination” of elected officials, police officers, and public-school
+            teachers - this removal of the hosting effectively took the platform offline.</p>
+
+          <p>Prior to deplatforming, a user named '@donk_enby' used a Python script to copy ~8TB, or ~99% of the
+            publicly available data uploaded to the platform, due to the platform's poor coding and lax security
+            (including sequentially numbered posts, and no rate limiting of downloads).<br></p>
+
+          <p>Of the 1.1 million videos in the downloaded tranche, geolocation data was present in about 6%. This
+            web-based application searches through those 64,520 geotagged video posts for the tagged video posts closest
+            to your location.
+
+          <p>Of the geotagged videos, 618 were directly linked to the Capitol attack - which federal prosecutors <a
+              href="https://www.reuters.com/article/us-usa-trump-capitol-arrests/u-s-says-capitol-rioters-meant-to-capture-and-assassinate-officials-filing-idUSKBN29K0K7?il=0"
+              class="links">stated</a> involved a plot “to capture and assassinate elected officials.” These 618
+            geotagged and other (non-geotagged) videos from that day were used in the second impeachment of Donald
+            Trump, as well as the arrests/convictions of many of the other <a
+              href="https://www.justice.gov/usao-dc/capitol-breach-cases">participants to the Capitol Hill riot</a>.</p>
+          <h1> Coding, Data and Such</h1>
+          <p>The dataset uses decimal longitude and latitude to four decimal places - meaning it can be assumed to have
+            an accuracy of approximately +/- 36 feet (11 meters)
+            in North America. Other than the location, date and post number, other identifiable information (such as
+            user name) was stripped out of the dataset.</p>
+           <p>If you enter a location on the following page, it is forward geocoded, and if you use the browser location
+            query it is reverse geocoded to the Map Maker <a href="https://geocode.maps.co/">Geocoding API</a>. The Java
+            backend calculates distances using the <a href="https://en.wikipedia.org/wiki/Haversine_formula">Haversine
+              Formula</a> - a trigometric approach dating to the very start of the 19th century. The Haversine formula
+            determines the great-circle distances between points on a sphere* given their longitudes and latitudes.
+          </p>
+          <p>After calculating the distance between your (entered or queried) latitude/longitude and each of the 64,520
+            posts, the results are sorted and you are provided the number of posts that you requested by proximity,
+            along with formatted links to Google Maps, Google Street View, and Google Directions from your location to
+            the location associated with the Parler post. Originally conceived as a fully Google Maps API project, it
+            was changed to the free Map Maker API to eliminate cost (with the assumption I would post it for public
+            use). Note that the chosen API is rate limited to two requests per second, so if this application exceeds
+            that, you may receive a <a href="https://httpstatusdogs.com/429-too-many-requests">HTTP 429</a> response.
+          </p>
+          <p>* Even ignoring surface topography, Earth isn't a perfect sphere (it is more of an ellipsoid/squished
+            spheroid shape), but the Haversine is a fairly simple formula that is also very accurate with close points
+            (and less so with father distances).<br>&nbsp;</p>
+
+        </div>
+
+
+        <aside id="aboutNoteInfo">
+          <!-- DISCLAIMER NOTE -->
+          <h2>NOTE:</h2>
+          <p>The locations on the following page may not correlate with anyone who participated in the activities in DC
+            on 1/6/2021, and may just indicate a random
+            user of the platform driving by a given location, inaccurate geotagging by the mobile device, or any of a
+            number of other <em>NON-nefarious</em> possibilities.</p>
+
+          <p>THIS SHOULD BE VIEWED MERELY AS A PROGRAMMING / MAPPING EXERCISE.</p>
+        </aside>
+      </section>
+
+      <footer>
+        <!--**************   Footer ******************-->
+        <article>
+          <p>© 2023, Stephen Chalmers: <a href="www.stephenchalmers.com">www.stephenchalmers.com</a></p>
+        </article>
+
+      </footer>
+    </div>
+    <div id="footerbar"><!-- Grey footer at the bottom --></div>
+  </div>
+</body>
+
+</html>
