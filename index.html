@@ -42,30 +42,29 @@
         <img class="pl_logo" src="PL_Assets/images/PL_Logo-100px.png" alt="Parler Locator Logo">
       </div>
 
-      <nav> Home&nbsp&nbsp|&nbsp&nbsp<a href="locator.html" class="links">Locator</a>|&nbsp&nbsp<a href="author.html"
-          class="links">Author</a> </nav>
+      <nav> <a href="index.html" class="links">Home</a>|&nbsp&nbsp<a href="locator.html"
+          class="links">Locator</a>|&nbsp&nbsp<a href="author.html" class="links">Author</a> </nav>
     </header>
     <div id="content">
 
       <section id="mainContent">
         <h3 align="center"><em>Click on the "Locator" link above to find the closest pre-01/2021 geotagged Parler
-            videos!</em></h3>
+            videos!</em></h3><br>
         <h1>Background Information: Parler Locator (v 2023.10)</h1>
         <div id="About_text">
-          <p>In February 2023, I became interested in the following topic after being asks to write the chapter
+          <p>In February 2023, I became interested in the following topic after being asked to write the chapter
             “Selfies, Biometrics, Geolocation, and the 2021 Capitol Hill Riot: How Photography is Used in the Service of
             Surveillance” for the book <a
               href="https://www.routledge.com/The-Routledge-Companion-to-Photography-Representation-and-Social-Justice/Neumuller/p/book/9781032112947"
               target="_blank"><em>The Routledge Companion to Photography, Representation and Social Justice</em></a>
-            (Taylor &amp; Francis, ISBN: 978-1-032-11294-7). Among other topics, in this chapter I discussed the use of
-            facial recognition with regards to videos downloaded from Parler to identify suspected participants of the
-            Capitol Hill riot.</p>
+            (Taylor &amp; Francis, ISBN: 978-1-032-11294-7). Among other topics, in this chapter I discussed how
+            facial recognition was used to identify suspected participants of the Capitol Hill riot, from videos scraped from Parler.</p>
 
           <div class="parloc_map">
             <figure>
               <figcaption><img src="PL_Assets/images/ParLoc_Posts-small_1280px.png" width="600"
                   alt="Map of geotagged posts">
-                A GIS map I generated to show the distribution of the 64,530 posts in the cleaned dataset</figcaption>
+                A GIS map I generated to show the distribution of the 64,520 posts in the cleaned dataset</figcaption>
             </figure>
             <p>The social media site '<a href="https://en.wikipedia.org/wiki/Parler/">Parler</a>,' was launched on 08
               August 2018 by John Matze and Jared Thomson. Associated with extreme conservatives, the platform marketed
@@ -79,20 +78,20 @@
             conservative political discourse - while others viewed the network as amplifying extremist, racist, sexist
             and violent content, along with conspiracy theories.</p>
 
-
-
-          <p>After the storming of the U.S. Capitol on 6 January 2021, Parler faced increased scrutiny due to its role
+          <p>Following the storming of the U.S. Capitol on 6 January 2021, Parler faced increased scrutiny due to its
+            role
             in facilitating the planning and organization of the insurrection. The application was removed from Apple's
-            App Store and Google Play, and on 10 January 2021 Amazon Web Services terminated Parler's hosting services,
+            App Store and Google Play, and on 10 January 2021 Amazon Web Services (AWS) terminated Parler's hosting
+            services,
             after finding the company in breach of contract for failing to identify and remove posts by users that
             called for the “rape, torture, and assassination” of elected officials, police officers, and public-school
-            teachers - this removal of the hosting effectively took the platform offline.</p>
+            teachers - removing the hosting effectively took the platform offline.</p>
 
           <div class="donk">
             <figure>
               <figcaption><img src="PL_Assets/images/donk_enby copy.jpg" width="200" height="200"
                   alt="Donk Enby, with Gurken Prinz pickles">
-                donk_enby (Credit: Twitter)</figcaption>
+                @donk_enby (Credit: Twitter)</figcaption>
             </figure>
             <p> Prior to deplatforming, a user named '@donk_enby' used a Python script to copy ~8TB, or ~99% of the
               publicly available data uploaded to the platform, due to the platform's poor coding and lax security
@@ -107,7 +106,7 @@
             to your entered location.</p>
 
           <p>Of the geotagged videos, <a href="https://backspace.com/parler-capitol/" target="_blank">618 were directly
-              linked to the Capitol attack</a> - which federal prosecutors <a
+              linked to the storming of the U.S. Capitol</a> - which federal prosecutors <a
               href="https://www.reuters.com/article/us-usa-trump-capitol-arrests/u-s-says-capitol-rioters-meant-to-capture-and-assassinate-officials-filing-idUSKBN29K0K7?il=0"
               class="links" target="_blank">stated</a> involved a plot “to capture and assassinate elected officials.”
             These 618
@@ -116,13 +115,13 @@
               href="https://www.justice.gov/usao-dc/capitol-breach-cases" target="_blank">participants to the Capitol
               Hill riot</a>.</p>
           <h1> Coding, Data and Such</h1>
-          <p>The dataset uses decimal longitude and latitude to four decimal places - meaning it can be assumed to have
-            an accuracy of approximately +/- 36 feet (11 meters)
-            in North America. Other than the location, date and post number, other identifiable information (such as
+          <p>The dataset contains longitude and latitude to four decimal places - meaning it can be assumed to have
+            an accuracy of approximately +/- 36 feet (11 meters) in North America. Other than the location, date and
+            post number, other identifiable information (such as
             user name) was stripped out of the dataset.</p>
 
 
-          <p>If you enter a location on the following page, it is forward geocoded, and if you use the browser location
+          <p>If you enter a location on the following page, it is forward geocoded - and if you use the browser location
             query it is reverse geocoded to the Map Maker <a href="https://geocode.maps.co/" target="_blank">Geocoding
               API</a>. The Java
             backend calculates distances using the <a href="https://en.wikipedia.org/wiki/Haversine_formula"
@@ -141,7 +140,7 @@
           </p>
           <p>* Even ignoring surface topography, Earth isn't a perfect sphere (it is more of an ellipsoid/squished
             spheroid shape), but the Haversine is a fairly simple formula that is also very accurate with close points
-            (and less so with father distances).<br>&nbsp;</p>
+            (just less so with father distances).<br>&nbsp;</p>
         </div>
 
 
@@ -150,8 +149,8 @@
           <!-- DISCLAIMER NOTE -->
           <h2>NOTE:</h2>
           <p>The locations on the following page may not correlate with anyone who participated in the activities in DC
-            on 1/6/2021, and
-            may just indicate a random user of the platform driving by a given location, inaccurate geotagging by
+            on 1/6/2021, and may just indicate a random user of the platform driving by a given location, inaccurate
+            geotagging by
             the mobile device, inaccurate parsing of the coordinates by the API or Google, or any of a number of other
             NON-nefarious possibilities.</p>
 
