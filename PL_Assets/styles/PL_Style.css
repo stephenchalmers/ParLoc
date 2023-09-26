@@ -5,6 +5,42 @@ body {
 	background-color: #e1e1e1;
 }
 
+.donk figcaption, .parloc_map figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
+figcaption img {
+filter: drop-shadow(2px 2px 4px #787878);
+}
+
+.donk figure {
+   display: table;
+	float: right;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  margin-right: 5px;
+
+}
+
+.parloc_map figure {
+   display: table;
+	float: left;
+	
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  margin-left: 5px;
+
+}
+
+.donk p, .parloc_map p {
+	text-align: justify;
+}
+
 input {
 	width: 50%;
 	height: 3em;
@@ -99,12 +135,10 @@ header nav a {
 	padding-right: 2%;
 }
 
-#content #mainContent h1,
-#content #mainContent h2 {
+#content #mainContent h1, #content #mainContent h2 {
 	/* Styling for main headings */
 	font-family: source-sans-pro, sans-serif;
 	color: rgba(146, 146, 146, 1.00);
-
 }
 
 #content #mainContent h3 {
